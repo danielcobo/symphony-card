@@ -1,3 +1,25 @@
 *{
 	box-sizing:border-box;
 }
+
+
+/*
+-----
+VIEWS 
+-----
+*/
+	.view{
+		height:100%;
+		width:100%;
+		display: none;
+	}
+
+/* App view */
+	.app{
+		display:block;
+	}
+
+/* Display view */
+	.display{
+		
+	}

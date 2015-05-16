@@ -1,27 +1,54 @@
 {
+	"products": [
 		{
+			"name": "smoki",
+			"price": 0.2
 		},
 		{
+			"name": "heineken",
+			"price": 0.9
 		},
 		{
+			"name": "plenice",
+			"price": 5
 		},
 		{
+			"name": "orbit",
+			"price": 0.5
 		},
 		{
+			"name": "kava",
+			"price": 2
 		},
 		{
+			"name": "mleko",
+			"price": 0.5
 		},
 		{
+			"name": "sladkor",
+			"price": 2
 		},
 		{
+			"name": "smetana",
+			"price": 0.5
 		},
 		{
+			"name": "jajca",
+			"price": 3
 		},
 		{
+			"name": "lak za nohte",
+			"price": 5
 		}
 	],
+	"promos": [
 		{
+			"productId": 3,
+			"discount": 0.5,
+			"audience": {
+				"starost" : 
 			}
 		}
 	],
+	"users": []
 }
