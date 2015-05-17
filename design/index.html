@@ -38,7 +38,7 @@
 		<div class="view appLoggedIn">
 			<img src="img/ui/barcode.png">
 			<p>Show the barcode at checkout to gain additional discounts.</p>
-			<a class="btn js-viewDisplay" href="#">Odpri aktualne ponudbe.</a>
+			<a class="btn js-viewDisplay" href="#">Show current discounts</a>
 			
 			<a class="infoBtn" href="#"></a>
 		</div>
@@ -52,6 +52,8 @@
 					<li class="sliderItem"><img src="img/ad3.png"></li>				
 				</ol>
 			</div>
+			
+			<a class="btn js-viewLoggedIn" href="#">Back to barcode</a>
 		</div>
 		
 		
@@ -66,13 +68,65 @@
 		</div>
 		
 		<script src="js/external/jquery/jquery.js"></script>
-		<script>			
+		<script>	
+			
+			var slider = {
+				current : 0
+			}
+			
+			slider.animate = function(){
+				slider.current ++
+				
+				var i = slider.current
+				var prev = i-1
+				
+				if (i > 3){
+					i = 1
+					slider.current = i
+					prev = 3 //1 ostane zadnji slide
+				}
+				
+				if (prev){
+					$(".sliderItem:nth-child("+prev+")").animate({
+						left: "-100%",
+						opacity : "0.0000000001"
+					})
+		//			.queue(function(){
+		//				$(this).css({
+		//					opacity:1, 
+		//					left:"100%"
+		//				})
+		//			})
+					setTimeout(function(){
+									$(".sliderItem:nth-child("+prev+")").css({
+										opacity:1, 
+										left:"100%"
+									})
+								},
+						500);
+				}
+
+				$(".sliderItem:nth-child("+i+")").animate({
+					left: "0%"
+				})
+			}
+			
+			setInterval(slider.animate,5000);
+			
+			
+			var view = {
+				set : function(viewName){
+					$(".view").hide()
+					$("." + viewName).show()
+				}
+			}
+					
 			/* 
 			------
 			App JS 
 			------
 			*/
-			$(".fbLogin").on("mousedown", function(){
+			$(".fbLogin, .js-viewLoggedIn").on("mousedown", function(){
 				view.set("appLoggedIn")
 			})
 			

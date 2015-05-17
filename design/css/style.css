@@ -39,10 +39,15 @@
 		display: block;
 		display: none;
 		margin: 0 auto;
-		max-width: 50em;
+		max-width: 52em;
 		padding: 3em 2em;
 		text-align: center;
 	}
+	
+	.display .slider{
+		height: 36em;
+	}
+
 
 	/* 	App view */
 	.app{
@@ -95,8 +100,15 @@
 		list-style:none;
 		text-align: center;
 		padding: 0 0 3em;
+	
+		left:100%;
 	}
-
+	
+	.sliderItem:nth-child(1){
+		left: 0;
+	}
+	
+	
 	
 /* Info button */
 	.infoBtn{
