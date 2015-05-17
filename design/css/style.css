@@ -1,0 +1,120 @@
+/* Basics */
+	*{
+		box-sizing:border-box;
+	}
+
+
+	body{
+		line-height:1.5em;
+	}
+
+	.btn{
+		color:#333;
+		text-decoration:none;
+		border-radius:5px;
+		line-height: 3em;
+		display:inline-block;
+		padding:0 2em;
+		border: 3px solid #333;
+		margin-top: 1.5em;
+	}
+	
+	p{
+		margin: 1.5em 0 0 0;
+	}
+	
+	img{
+		width: 100%;
+		height: auto;
+	}
+
+	ul,li{
+		margin: 0;
+		padding: 0;
+		list-style: outside;
+	}
+
+/* Views */
+	.view{
+		display: block;
+		display: none;
+		margin: 0 auto;
+		max-width: 50em;
+		padding: 3em 2em;
+		text-align: center;
+	}
+
+	/* 	App view */
+	.app{
+		display:block;
+	}
+	
+	.app, .appLoggedIn{
+		max-width: 400px;
+	}
+		
+	.fbLogin{ /* fb login btn */
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		width: 240px;
+		background: #5975B1;
+		border:none;
+		color: #fff;
+	}
+
+	.appLoggedIn{
+		margin-top: 3em;
+	}
+	
+	.about{
+		text-align: left;
+	}
+	
+/* Slider */
+	.slider{
+		margin: 0 auto;
+		display: block;
+		position: relative;
+		overflow: hidden;
+		height: 28em;
+	}
+	
+	.slider ol{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	
+	.sliderItem{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background-color: #fff;
+		display:block;
+		list-style:none;
+		text-align: center;
+		padding: 0 0 3em;
+	}
+
+	
+/* Info button */
+	.infoBtn{
+		background: #ccc;
+		border-radius: 100%;
+		height: 1.5em;
+		width: 1.5em;
+		font-size: 0.875em;
+		display: block;
+		position: absolute;
+		bottom: 1em;
+		right: 1em;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	.infoBtn:after{
+		content: "?";
+		color:#fff;
+		text-align: center;
+	}

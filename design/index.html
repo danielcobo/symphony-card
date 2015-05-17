@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Symphony-card</title>
+		<meta name="description" content="A project.">
+
+		<link rel="stylesheet" href="css/external/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>		
+		<div class="view app">
+			<div class="slider">
+				<ol class="sliderItems">
+					<li class="sliderItem icon iconFb">
+						<img src="img/ui/fb.png">
+						<p>Forms are boring. Create your Goodies card by simply logging in to facebook.</p>
+					</li>
+					<li class="sliderItem icon iconGoods">
+						<img src="img/ui/goods.png">
+						<p>Swipe your card when entering the store to see discounts.</p>
+					</li>
+					<li class="sliderItem icon iconDiscount">
+						<img src="img/ui/discount.png">
+						<p>Swipe the card on checkout to get additional discounts.</p>
+					</li>				
+				</ol>
+			</div>
+		
+			<a class="btn fbLogin" href="#">Login with Facebook</a>
+
+			<a class="infoBtn" href="#"></a>
+		</div>
+		
+		
+		<div class="view appLoggedIn">
+			<img src="img/ui/barcode.png">
+			<p>Show the barcode at checkout to gain additional discounts.</p>
+			<a class="btn js-viewDisplay" href="#">Odpri aktualne ponudbe.</a>
+			
+			<a class="infoBtn" href="#"></a>
+		</div>
+		
+		
+		<div class="view display">
+			<div class="slider">
+				<ol class="sliderItems">
+					<li class="sliderItem"><img src="img/ad1.png"></li>	
+					<li class="sliderItem"><img src="img/ad2.png"></li>	
+					<li class="sliderItem"><img src="img/ad3.png"></li>				
+				</ol>
+			</div>
+		</div>
+		
+		
+		<div class="view about">
+			<h1>Icons</h1>
+			<ul>
+				<li>Goods icon created by Matt Brooks from the <a href="https://thenounproject.com">Noun Project</a>.</li>
+				<li>Discount icon created by Eray Kula from the <a href="https://thenounproject.com">Noun Project</a>.</li>
+				<li>Facebook icon created by Niels Gesquiere from the <a href="https://thenounproject.com">Noun Project</a>.</li>
+				<li>Barcode icon created by Nate Eul from the <a href="https://thenounproject.com">Noun Project</a>.</li>
+			</ul>
+		</div>
+		
+		<script src="js/external/jquery/jquery.js"></script>
+		<script>			
+			/* 
+			------
+			App JS 
+			------
+			*/
+			$(".fbLogin").on("mousedown", function(){
+				view.set("appLoggedIn")
+			})
+			
+			$(".infoBtn").on("mousedown", function(){
+				view.set("about")
+			})
+			
+			$(".js-viewDisplay").on("mousedown", function(){
+				view.set("display")
+			})
+			
+			$().on("mousedown", function(){
+				view.set("appLoggedIn")
+			})
+			
+		</script>
+	</body>
+</html>
